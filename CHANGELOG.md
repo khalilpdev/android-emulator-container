@@ -2,7 +2,13 @@
 
 All notable changes for the Android scripts and AVD setup.
 
-## Unreleased - 2026-06-13
+## Unreleased - 2026-06-14
+
+- Fixed create-fast-emulator-android.ps1: Updated Android SDK path to E:\Android\Sdkwin and set Java to Temurin 21 (C:\Program Files\Eclipse Adoptium\jdk-21.0.3.9-hotspot).
+- Created AVD: Fast_Android_34 (android-34 google_apis_playstore x86_64) with Pixel 6 profile using Temurin JDK 21.
+- Emulator verified and running successfully with GPU host acceleration.
+
+## 2026-06-13
 
 - Created AVD: Pixel_3a_API_28_Lite_2 (android-28 google_apis x86_64). Fixed missing kernel by copying from backup.
 - Added start script: start-pixel3a-api28-lite.ps1 (tries GPU host then swiftshader).
@@ -10,14 +16,8 @@ All notable changes for the Android scripts and AVD setup.
 - Added container docs: ANDOID-Container.md and docker-compose (android-container-docker-compose.yml).
 - Added helper container scripts: check-kvm.sh, run-redroid-wsl.sh, run-docker-android-wsl.sh.
 - Added backup/restore scripts for Windows and Linux (backup-avd-*.ps1/.sh, restore-avd-*.ps1/.sh).
+- Added checksum generation (.sha256) for backups and verification on restore (Windows and Linux).
 
 Notes:
 - Current Windows backup default: E:\Android\avd-backups
 - Linux backup default updated to: /media/leandro/DADOS/avd-backups
-
-Next actions:
-- (optional) Update backup scripts to add checksum and create README with quick restore examples.
-- Added checksum generation (.sha256) for backups and verification on restore (Windows and Linux).
-
-Next actions:
-- (optional) Update backup scripts to use the recommended default paths and add checksum; create README with quick restore examples.

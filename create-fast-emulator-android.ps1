@@ -1,11 +1,10 @@
 # Android Fast Emulator Creator (Windows PowerShell)
 
-$AndroidHome = "$env:LOCALAPPDATA\Android\Sdk"
-$JavaHome = "C:\Program Files\Android\Android Studio\jbr"
+$AndroidHome = "E:\Android\Sdkwin"
+$JavaHome = "C:\Program Files\Eclipse Adoptium\jdk-21.0.3.9-hotspot"
 
-if (-not (Test-Path $JavaHome)) {
-    $JavaHome = "C:\Program Files\Java\jdk-17"
-}
+# Set JAVA_HOME environment variable
+$env:JAVA_HOME = $JavaHome
 
 # Update PATH for this session
 $env:PATH = "$JavaHome\bin;$AndroidHome\cmdline-tools\latest\bin;$AndroidHome\platform-tools;$AndroidHome\emulator;$env:PATH"
@@ -20,8 +19,8 @@ if (-not (Test-Path $AndroidHome)) {
     return
 }
 
-$AvdName = "Fast_Android_15"
-$SysImage = "system-images;android-35;google_apis_playstore;x86_64"
+$AvdName = "Fast_Android_34"
+$SysImage = "system-images;android-34;google_apis_playstore;x86_64"
 $DeviceProfile = "pixel_6"
 
 Write-Host "Creating AVD with:"
