@@ -30,7 +30,7 @@ Write-Host " - Device Profile: $DeviceProfile"
 Write-Host ""
 
 # Pipe "no" to bypass custom hardware profile prompt
-"no" | avdmanager create avd -n $AvdName -k $SysImage -d $DeviceProfile --force
+"no" | avdmanager create avd -n "$AvdName" -k "$SysImage" -d "$DeviceProfile" --force
 
 if ($LASTEXITCODE -eq 0) {
     Write-Host ""
