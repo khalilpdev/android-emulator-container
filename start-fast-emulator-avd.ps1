@@ -7,7 +7,7 @@ $env:ANDROID_HOME = $AndroidHome
 $env:JAVA_HOME = $JavaHome
 $env:PATH = "$JavaHome\bin;$AndroidHome\emulator;$env:PATH"
 
-$AvdName = "Fast_Android_34"
+$AvdName = "Fast_Android_28"
 
 Write-Host "Starting $AvdName..." -ForegroundColor Cyan
 & "$AndroidHome\emulator\emulator.exe" -avd $AvdName -no-boot-anim -no-audio -gpu off -no-accel

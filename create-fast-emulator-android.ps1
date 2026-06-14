@@ -19,9 +19,9 @@ if (-not (Test-Path $AndroidHome)) {
     return
 }
 
-$AvdName = "Fast_Android_34"
-$SysImage = "system-images;android-34;google_apis_playstore;x86_64"
-$DeviceProfile = "pixel_6"
+$AvdName = "Fast_Android_28"
+$SysImage = "system-images;android-28;google_apis;x86_64"
+$DeviceProfile = "pixel"
 
 Write-Host "Creating AVD with:"
 Write-Host " - Name: $AvdName"
