@@ -1,0 +1,16 @@
+
+● Sim! Criei versões para o Windows (tanto em Batch/CMD quanto em PowerShell) na sua pasta home (~ / /home/leandro):
+
+   - create-fast-emulator-android.bat / .ps1
+   - start-fast-emulator-avd.bat / .ps1
+
+  Como usar no Windows:
+
+   1. Copie esses arquivos para o seu computador Windows.
+   2. Certifique-se de que o Android Studio está instalado no local padrão.
+   3. Se não tiver a imagem instalada, baixe no SDK Manager ou via CMD:
+   sdkmanager "system-images;android-35;google_apis_playstore;x86_64"
+   4. Execute o script create... para criar o emulador e start... para rodar! No Windows, a aceleração de hardware (WHPX/HAXM) é automática.
+
+ ~                                                                            Session: 19.9 AIC use
+──────────────────────────────────────────────────────

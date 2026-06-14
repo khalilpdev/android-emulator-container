@@ -1,0 +1,32 @@
+# Docker Compose for Android containers (Redroid and optional docker-android)
+# Usage: run inside WSL2 distro or native Linux where Docker has /dev/kvm access.
+
+version: '3.8'
+services:
+  redroid:
+    image: ghcr.io/redroid/redroid:latest
+    container_name: redroid
+    privileged: true
+    devices:
+      - /dev/kvm:/dev/kvm
+    ports:
+      - "5555:5555"    # adb
+    environment:
+      - ADB_PORT=5555
+    shm_size: 1g
+    restart: unless-stopped
+
+  # Optional: interactive image with VNC/noVNC for debugging UI
+  docker-android:
+    image: budtmo/docker-android-x86-8.1
+    container_name: docker-android
+    privileged: true
+    ports:
+      - "6080:6080"   # VNC/web
+      - "5556:5555"   # adb (mapped to host 5556 to avoid conflict with redroid)
+    environment:
+      - DEVICE=Nexus 5
+    shm_size: 1g
+    restart: unless-stopped
+
+# Note: prefer running only one of the services that binds adb:5555 to avoid port conflicts.
