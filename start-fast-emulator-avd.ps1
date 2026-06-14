@@ -7,7 +7,7 @@ $env:ANDROID_HOME = $AndroidHome
 $env:JAVA_HOME = $JavaHome
 $env:PATH = "$JavaHome\bin;$AndroidHome\emulator;$env:PATH"
 
-$AvdName = "Maui_Dev"
+$AvdName = "Maui_Dev_3GB"
 
 Write-Host "Starting $AvdName..." -ForegroundColor Cyan
 Write-Host "Checking acceleration..." -ForegroundColor Yellow
