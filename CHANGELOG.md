@@ -4,9 +4,11 @@ All notable changes for the Android scripts and AVD setup.
 
 ## Unreleased - 2026-06-14
 
-- Fixed create-fast-emulator-android.ps1: Updated Android SDK path to E:\Android\Sdkwin and set Java to Temurin 21 (C:\Program Files\Eclipse Adoptium\jdk-21.0.3.9-hotspot).
-- Created AVD: Fast_Android_34 (android-34 google_apis_playstore x86_64) with Pixel 6 profile using Temurin JDK 21.
-- Emulator verified and running successfully with GPU host acceleration.
+- Fixed Android emulator: Temurin JDK 21 + E:\Android\Sdkwin configuration working.
+- Created Fast_Android_34 AVD (Android 34, google_apis_playstore, x86_64, Pixel 6 profile).
+- **Emulator startup**: Using software rendering (GPU off, no HAXM acceleration) for compatibility.
+- Updated start-fast-emulator-avd.ps1 with proven working flags: `-no-boot-anim -no-audio -gpu off -no-accel`
+- Emulator verified running and stable for Maui development.
 
 ## 2026-06-13
 
