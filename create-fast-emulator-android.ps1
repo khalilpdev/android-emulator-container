@@ -19,7 +19,7 @@ if (-not (Test-Path $AndroidHome)) {
     return
 }
 
-$AvdName = "Fast_Android_28"
+$AvdName = "Android_28_Fast"
 $SysImage = "system-images;android-28;google_apis;x86_64"
 $DeviceProfile = "pixel"
 
