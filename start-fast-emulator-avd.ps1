@@ -7,7 +7,7 @@ $env:ANDROID_HOME = $AndroidHome
 $env:JAVA_HOME = $JavaHome
 $env:PATH = "$JavaHome\bin;$AndroidHome\emulator;$env:PATH"
 
-$AvdName = "Fast_Android_34"
+$AvdName = "Pixel_3a_API_28_Lite_2"
 
 Write-Host "Starting $AvdName..." -ForegroundColor Cyan
-& "$AndroidHome\emulator\emulator.exe" -avd $AvdName -gpu host
+& "$AndroidHome\emulator\emulator.exe" -avd $AvdName -gpu off -accel auto
