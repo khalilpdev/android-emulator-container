@@ -1,0 +1,18 @@
+services:
+  flutter:
+    build:
+      context: ./flutter
+    container_name: flutter-dev
+    volumes:
+      - ./:/workspace
+    working_dir: /workspace
+    tty: true
+
+  maui:
+    build:
+      context: ./maui
+    container_name: maui-dev
+    volumes:
+      - ./:/workspace
+    working_dir: /workspace
+    tty: true

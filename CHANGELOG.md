@@ -4,11 +4,12 @@ All notable changes for the Android scripts and AVD setup.
 
 ## Unreleased - 2026-06-14
 
-- Fixed Android emulator: Temurin JDK 21 + E:\Android\Sdkwin configuration working.
-- Created Fast_Android_34 AVD (Android 34, google_apis_playstore, x86_64, Pixel 6 profile).
-- **Emulator startup**: Using software rendering (GPU off, no HAXM acceleration) for compatibility.
-- Updated start-fast-emulator-avd.ps1 with proven working flags: `-no-boot-anim -no-audio -gpu off -no-accel`
-- Emulator verified running and stable for Maui development.
+- Fixed Android emulator: Temurin JDK 21 + C:\Android\Sdk configuration working.
+- Added Genymotion + Docker + ADB TCP/IP workspace under `genymotion/`.
+- Created `Maui_Solo` AVD (Android 28, google_apis, x86_64, Pixel 3a profile).
+- **Emulator startup**: Using WHPX/Hyper-V when available with `swiftshader_indirect` to avoid Intel GPU crashes.
+- Updated start-fast-emulator-avd.ps1 with optimized flags: `-accel on -gpu swiftshader_indirect -memory 4096 -cores 2`
+- Updated create-fast-emulator-android.ps1 to rewrite config.ini for 2 cores, 4GB RAM, no cameras, no audio, no device frame, and software GPU.
 
 ## 2026-06-13
 

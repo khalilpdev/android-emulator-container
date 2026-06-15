@@ -2,6 +2,8 @@
 
 Este documento descreve opções e comandos para executar Android em container (via WSL2/Docker no Windows) e diretamente em Linux.
 
+Para a abordagem com **Genymotion Desktop + ADB TCP/IP + Flutter/.NET MAUI em containers**, veja `genymotion/README.md`.
+
 > Aviso: algumas operações exigem virtualização (BIOS), privilégios de administrador e /dev/kvm disponível.
 
 ## 1) Pré-requisitos (WSL2 + Docker Desktop)

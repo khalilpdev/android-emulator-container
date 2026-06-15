@@ -3,6 +3,7 @@
 
    - create-fast-emulator-android.bat / .ps1
    - start-fast-emulator-avd.bat / .ps1
+   - perfil novo: Maui_Perf (Android 28, x86_64, 3GB RAM, swiftshader_indirect)
 
   Como usar no Windows:
 
