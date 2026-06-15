@@ -8,6 +8,7 @@ Abordagem recomendada para evitar o Android Studio Emulator local:
 - **VS Code / Visual Studio** para desenvolvimento
 
 > No Windows, prefira rodar esse workspace via WSL2 + Docker Desktop; o build local pode depender do estado do Docker Desktop.
+> Para Linux Mint, veja `linux-mint.md`.
 
 ## Fluxo
 
