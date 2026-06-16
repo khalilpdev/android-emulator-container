@@ -1,0 +1,1 @@
+docker run -d -p 6080:6080 -v data:/media/leandro/a02130d3-c8e9-4595-9c8e-e5f64ec853f2/docker/android/ -e EMULATOR_DEVICE="Samsung Galaxy S10" -e WEB_VNC=true --device /dev/kvm --name android-container budtmo/docker-android:emulator_11.0
